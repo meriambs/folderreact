@@ -1,37 +1,29 @@
 import './App.css';
-import Button from 'react-bootstrap/Button';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {Navbar,Container,Nav,NavDropdown} from 'react-bootstrap';
-
-
+import Card from './Card'
 
 function App() {
+  let test =(
+    <>
+    <button>test button child 1</button>
+  <button>test button child2 </button>
+    </>
+  )
   return (
     < >
+     <h1 style={{textAlign:"center"}}>workshop Props</h1>
 <div className='App'>
-<Navbar bg="light" expand="lg">
-  <Container>
-    <Navbar.Brand href="#home">test bootsrap</Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="me-auto">
-        <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href="#link">Link</Nav.Link>
-        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-          <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-        </NavDropdown>
-      </Nav>
-    </Navbar.Collapse>
-  </Container>
-</Navbar>
+  {/* creation d'une prop like alan smith  */}
+<Card name="test" imag="https://cdn.iconscout.com/icon/free/png-256/avatar-371-456323.png"/>
+{/* ici on a le faite de passer un seulee composant  */}
+<Card name="testy alman ">
+  {test}
+</Card>
+<Card  name="i\m an other test"/>
+<Card name="and no i'am "/>
 </div>
     
    
-      <Button>Yes We did it </Button>
+    
     
     </>
   );
